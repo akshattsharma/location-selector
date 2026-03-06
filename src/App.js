@@ -39,7 +39,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => setCities(data))
       .catch((err) => console.error("Error fetching cities: ", err));
-  }, [selectedState]);
+  }, [selectedState, selectedCountry]);
 
   const handleCountryChange = (e) => {
     setSelectedCountry(e.target.value);
